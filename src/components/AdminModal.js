@@ -1,32 +1,29 @@
-import axios from 'axios';
-import React, {useState} from 'react';
-import {Button, Modal} from 'react-bootstrap';
-import swal from 'sweetalert';
+import axios from "axios";
+import React, { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
+import swal from "sweetalert";
 
 function Adminmodal(props) {
   const [show, setShow] = useState(false);
-  const [status, setStatus] = useState(props.itemData.status)
-
-
+  const [status, setStatus] = useState(props.itemData.status);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const handleStatus = (e) => setStatus(e.target.value)
+  const handleStatus = (e) => setStatus(e.target.value);
   const handleUpdateStatus = () => {
-    axios.put('http://localhost:8080/complain/updateStatus', {
-      complaint_ID: props.itemData.complaint_ID,
-      status: status
-    })
-    .then((response) => {
-       handleClose()
-       swal("Success","Complain Status Updated","success")
-       
-    })
-    .catch((err) => {
-      console.warn(err)
-    })
-  }
-
+    axios
+      .put("http://localhost:8080/complain/updateStatus", {
+        complaint_ID: props.itemData.complaint_ID,
+        status: status,
+      })
+      .then((response) => {
+        handleClose();
+        swal("Success", "Complain Status Updated", "success");
+      })
+      .catch((err) => {
+        console.warn(err);
+      });
+  };
 
   return (
     <>
@@ -34,16 +31,25 @@ function Adminmodal(props) {
         Update Status
       </Button>
 
-      <Modal show={show} onHide={handleClose} style={{color: 'black'}}>
+      <Modal show={show} onHide={handleClose} style={{ color: "black" }}>
         <Modal.Header closeButton>
           <Modal.Title>Complain </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p> <strong>Complaint ID: </strong> {props.itemData.complaint_ID}</p>
-          <p><strong>Priority: </strong>{props.itemData.priority}</p>
-          <p><strong>Description: </strong>{props.itemData.description}</p>
           <p>
-          <strong>Status: </strong>
+            {" "}
+            <strong>Complaint ID: </strong> {props.itemData.complaint_ID}
+          </p>
+          <p>
+            <strong>Priority: </strong>
+            {props.itemData.priority}
+          </p>
+          <p>
+            <strong>Description: </strong>
+            {props.itemData.description}
+          </p>
+          <p>
+            <strong>Status: </strong>
             <select value={status} onChange={handleStatus}>
               <option value="Resolved">Resolved</option>
               <option value="Intiated">Initiated</option>
@@ -64,4 +70,4 @@ function Adminmodal(props) {
   );
 }
 
-export default Adminmodal
+export default Adminmodal;

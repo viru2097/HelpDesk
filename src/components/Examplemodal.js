@@ -23,14 +23,6 @@ function Examplemodal(props) {
           <p><strong>Description: </strong>{props.itemData.description}</p>
           <p><strong>Status: </strong>{props.itemData.status}</p>
         </Modal.Body>
-        {/* <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer> */}
       </Modal>
     </>
   );

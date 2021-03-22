@@ -1,15 +1,14 @@
 import React from "react";
 import { IoIosTabletPortrait } from "react-icons/io";
-import { MdBusiness ,MdSms} from "react-icons/md";
-import {  RiRegisteredFill, RiTrainWifiLine} from "react-icons/ri";
-import {FaQuestion,} from "react-icons/fa";
+import { MdBusiness, MdSms } from "react-icons/md";
+import { RiRegisteredFill, RiTrainWifiLine } from "react-icons/ri";
+import { FaQuestion } from "react-icons/fa";
 
 const Services = () => {
   const [header] = React.useState({
     mainHeader: "SERVICES",
     subHeading: "A glimpse of what we offer",
-    text:
-     "",
+    text: "",
   });
   const [state] = React.useState([
     {
@@ -37,8 +36,7 @@ const Services = () => {
       id: 4,
       icon: <MdBusiness className="commonIcons" />,
       heading: "Women Safety Measurements",
-      text:
-        "Dedicated 24x7 to serve the women safety needs of the society",
+      text: "Dedicated 24x7 to serve the women safety needs of the society",
     },
     {
       id: 5,
@@ -51,8 +49,7 @@ const Services = () => {
       id: 6,
       icon: <RiRegisteredFill className="commonIcons" />,
       heading: "Issue Solving Ability  ",
-      text:
-        "Quick Resolution of issue can be done maximum in 2 weeks ."
+      text: "Quick Resolution of issue can be done maximum in 2 weeks .",
     },
   ]);
   return (
