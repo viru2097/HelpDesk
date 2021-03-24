@@ -14,14 +14,14 @@ import Login from "./components/Login";
 import AdminRegister from "./components/Admin_registration";
 import RegisterUser from "./components/UserRegistration";
 import MyComplain from "./components/MyComplain";
-import Examplemodal from "./components/Examplemodal";
 import AdminComplains from "./components/AdminComplains";
+import ErrorScreen from "./components/_404";
 
 const GlobalStyle = createGlobalStyle`
 body{
   background-color:${(props) =>
-    props.theme.mode == "dark" ? "#002366" : "#fff"};
-  color:${(props) => (props.theme.mode === "dark" ? "#fff" : "#111")};
+    props.theme.mode == "dark" ? '#ebf4f9' : "#fff"};
+  color:${(props) => (props.theme.mode === "dark" ? "#000" : "#111")};
 }
 `;
 
@@ -33,6 +33,7 @@ const App = () => {
         <GlobalStyle />
         <Navbar />
         <Switch>
+          <Route exact path="/home" component={Home}></Route>
           <Route exact path="/" component={Home}></Route>
           <Route path="/about" component={About}></Route>
           <Route path="/services" component={Services}></Route>
@@ -44,7 +45,8 @@ const App = () => {
           <Route path="/Admin_registration" component={AdminRegister}></Route>
           <Route path="/myComplain" component={MyComplain}></Route>
           <Route path="/adminComplain" component={AdminComplains}></Route>
-          <Redirect to="/login" component={Login}></Redirect>
+          <Route path="/error" component={ErrorScreen}></Route>
+          <Redirect to="/error" component={ErrorScreen}></Redirect>
         </Switch>
       </>
     </ThemeProvider>

@@ -28,35 +28,48 @@ function AdminComplains() {
       });
   };
   return (
+    
     <div>
+      
       <h1 className="text-center">Department Complains List</h1>
+      
       {tableData.length > 0 ? (
-        <table className="table table-striped" style={{ color: "white" }}>
+        <table className=" table table-striped">
           <thead>
             <tr>
-              <td>Id</td>
-              <td> Date</td>
-              <td>Type</td>
-              <td> Priority</td>
-              <td> Address</td>
-              <td>Description</td>
-              <td>Status</td>
+            <td><center>Id</center></td>
+              <td><center>Date</center></td>
+              <td><center>Department Type</center></td>
+              <td><center>Priority</center></td>
+              <td><center>Address</center></td>
+              <td><center>Description</center></td>
+              <td><center>Status</center></td>
+              <td><center>Remarks</center></td>
             </tr>
           </thead>
           <tbody>
+            
             {tableData &&
               tableData.map((item) => {
+                if(item.type===3)
+                var departmentName="General Sugesstions";
+                else if(item.type===2)
+                departmentName="Unethical Issues";
+                else
+                departmentName="Social Issues";
                 return (
                   <tr>
                     <td>{item.complaint_ID}</td>
                     <td>{item.date}</td>
-                    <td> {item.type}</td>
+                    <td> {departmentName}</td>
                     <td> {item.priority}</td>
                     <td> {item.address}</td>
                     <td> {item.description}</td>
-                    <td>
+                    <td><center>
                       <Adminmodal itemData={item} />
-                    </td>
+                      </center></td>
+                    <td>{item.remarks}</td>
+                    
                   </tr>
                 );
               })}

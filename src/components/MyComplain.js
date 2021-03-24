@@ -1,3 +1,4 @@
+import { green } from "@material-ui/core/colors";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Examplemodal from "./Examplemodal";
@@ -28,11 +29,11 @@ function MyComplain() {
       });
   };
   return (
-    <div className="table-responsive">
+    <div className="table-responsive" >
       <br></br>
-      <h1 className=""> Complains List</h1>
+      <h1 className="text-center"> Complains List</h1>
       {tableData.length > 0 ? (
-        <table className="table table-striped  " style={{ color: "white" }}>
+        <table className="table table-striped  " style={{ color: "black" }}>
           <thead>
             <tr>
               <td>Id</td>
@@ -47,11 +48,14 @@ function MyComplain() {
           <tbody>
             {tableData &&
               tableData.map((item) => {
+                if (item.type === 3) var departmentName = "General Sugesstions";
+                else if (item.type === 2) departmentName = "Unethical Issues";
+                else departmentName = "Social Issues";
                 return (
                   <tr>
                     <td>{item.complaint_ID}</td>
                     <td>{item.date}</td>
-                    <td> {item.type}</td>
+                    <td> {departmentName}</td>
                     <td> {item.priority}</td>
                     <td> {item.address}</td>
                     <td> {item.description}</td>

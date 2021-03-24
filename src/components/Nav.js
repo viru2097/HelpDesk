@@ -10,23 +10,24 @@ import ComplainIcon from "@material-ui/icons/Comment";
 import LoginIcon from "@material-ui/icons/Business";
 import { useHistory } from "react-router-dom";
 import swal from "sweetalert";
+import hdiconfinal from '../images/hdiconfinal.jpg'
 
 const Navbar = () => {
   const history = useHistory();
   const LogOut = () => {
     swal("..", "Logged Out");
     sessionStorage.clear();
-    history.push("/");
+    history.push("/home");
     window.location.reload();
   };
   return (
     <div className="container-fluid nav_bg ">
       <div className="row">
-        <div className="col-10 mx-auto">
-          <nav className="navbar navbar-expand-lg navbar-dark n  ">
-            <NavLink exact className="navbar-brand" to="/">
-              HelpDesk
-            </NavLink>
+        <div className="col-12 mx-auto">
+          <nav className="navbar navbar-expand-lg navbar-dark n  " style={{background:"#374785"}}>
+            <NavLink exact className="navbar-brand" to="/home">
+            <img src={hdiconfinal} class="Logo" style={{width:"50px",height:"50px", borderRadius: 400/ 2,marginRight:"5px"}}/>
+       <b>COMMUNAL HELP DESK</b></NavLink>
             <button
               className="navbar-toggler"
               type="button"
@@ -49,7 +50,7 @@ const Navbar = () => {
                     activeClassName="menu_active"
                     className="nav-link"
                     exact
-                    to="/"
+                    to="/home"
                   >
                     <HomeIcon></HomeIcon> Home
                   </NavLink>
@@ -147,7 +148,6 @@ const Navbar = () => {
                 {(sessionStorage.getItem("Admin Data") ||
                   sessionStorage.getItem("User Data")) && (
                   <li className="nav-item">
-
                     <NavDropdown title="Account" id="basic-nav-dropdown">
                       <a class="dropdown-item" href="#">
                         Welcome,{" "}

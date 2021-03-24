@@ -8,11 +8,12 @@ p {
 }
 
 .container2{
-    background-color:gray
+    background-color:gray;
 }
 
 .top-part {
-    background-color:rgb(187, 135, 68)
+    background-color:white;
+    color:black;
 }
 
 .center-content {
@@ -49,4 +50,8 @@ p {
 
 .grey-text {
     color: lightgrey
+}
+
+header{
+    background-color:  #ebf4f9;
 }
