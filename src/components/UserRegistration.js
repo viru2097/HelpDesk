@@ -191,14 +191,14 @@ function Register() {
                   </div>
 
                 <div class="form-group">
-                <label class="label"> Username</label>
+                <label class="label"> Password</label>
                     <input
                       class="input--style-4"
-                      type="text"
-                      value={user.userName}
-                      name="userName"
+                      type="password"
+                      value={user.password}
+                      name="password"
                       onChange={(e) =>
-                        setUser({ ...user, userName: e.target.value })
+                        setUser({ ...user, password: e.target.value })
                       }
                     />
 
