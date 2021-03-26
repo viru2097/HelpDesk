@@ -166,7 +166,7 @@ function Complains() {
                       </option>
                       <option value="General">General</option>
                       <option value="High">High</option>
-                      <option value="Modrate">Modrate</option>
+                      <option value="Moderate">Moderate</option>
                     </select>
                   </div>
                 </div>

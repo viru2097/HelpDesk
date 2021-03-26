@@ -230,7 +230,7 @@ function Register() {
                 </button>
 
                 <div class="d-flex justify-content-center text-danger">
-                  <a href="./Login" class="btn btn-link text-sucess ">
+                  <a href="./Login" class="btn btn-link text-danger ">
                     <b>Sign In Here...</b>
                   </a>
                 </div>

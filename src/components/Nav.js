@@ -164,6 +164,19 @@ const Navbar = () => {
                     </NavDropdown>
                   </li>
                 )}
+
+{(sessionStorage.getItem("Admin Data") ||
+                  sessionStorage.getItem("User Data")) && (
+                  <li className="nav-item">
+                   <a class="dropdown-item" style={{color:"white"}} href="#">
+                     {sessionStorage.getItem("User Data") &&
+                      JSON.parse(sessionStorage.getItem("User Data"))
+                        .firstName}{" "}
+                    {sessionStorage.getItem("Admin Data") &&
+                      JSON.parse(sessionStorage.getItem("Admin Data")).username}
+                      </a> 
+                  </li>
+                )}
               </ul>
             </div>
           </nav>

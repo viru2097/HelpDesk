@@ -46,10 +46,10 @@ const Home = () => {
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={Carousel3}
             alt="Fourth Slide"
-            style={{ height: "500px", width: "75%" }}
+            style={{ height: "500px", width: "75%", margin: "0px auto" }}
           />
 
           <Carousel.Caption style={{ color: "red" }}></Carousel.Caption>
@@ -57,10 +57,10 @@ const Home = () => {
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block "
             src={Four}
             alt="Fifth Slide"
-            style={{ height: "500px", width: "75%" }}
+            style={{ height: "500px", width: "75%", margin: "0px auto" }}
           />
 
           <Carousel.Caption style={{ color: "red" }}></Carousel.Caption>
@@ -83,9 +83,9 @@ const Home = () => {
             <br /> <br />
             <div class="d-flex-inline">
               <h4>
-                You can register your complaint related to any unethical issues
-                here and we will get back to you soon. <br /> You can also
-                contact on the helpline number given below.
+                If you are a registered user then you can directly register your
+                complain here <br /> You can also contact on the helpline number
+                given below.
               </h4>
             </div>
             <a href="./Complains">

@@ -15,12 +15,12 @@ const About = () => {
         <img src={helpDesk} class="img-fluid " style={{margin:"15px",padding:"65px", width:"560px",height:"550px"}}/>
       </div>
     
-      <div className="col-sm-8 d-flex justify-content-center align-items-center "  style={{wordSpacing:"0.5rem"}}> 
+      <div className="col-sm-8 d-flex justify-content-center align-items-center " > 
    
                 <h5>
                 <div style={{color:"red"}}>
       <h1><b>What We Do</b></h1>
-      <h1><b>Together We Can!</b></h1>
+      <h2><b>Together We Can!</b></h2>
       </div>
                   <div><i><q>Communal Help Desk</q></i> Management system is web application and one touch solution that provides interface through which a user/person can raise a complaint against general /social/unethical issues that are happening in their surrounding to a Main Admin (government officer).</div>
                <div> </div> 
