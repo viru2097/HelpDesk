@@ -1,15 +1,14 @@
 import React from "react";
 import { IoIosTabletPortrait } from "react-icons/io";
-import { MdBusiness ,MdSms} from "react-icons/md";
-import {  RiRegisteredFill, RiTrainWifiLine} from "react-icons/ri";
-import {FaQuestion,} from "react-icons/fa";
+import { MdBusiness, MdSms } from "react-icons/md";
+import { RiRegisteredFill, RiTrainWifiLine } from "react-icons/ri";
+import { FaQuestion } from "react-icons/fa";
 
 const Services = () => {
   const [header] = React.useState({
     mainHeader: "SERVICES",
     subHeading: "A glimpse of what we offer",
-    text:
-     "",
+    text: "",
   });
   const [state] = React.useState([
     {
@@ -40,8 +39,7 @@ const Services = () => {
       id: 4,
       icon: <MdBusiness className="commonIcons" />,
       heading: "Freight Business",
-      text:
-        "Dedicated 24x7 to serve the logistics needs of the country",
+      text: "Dedicated 24x7 to serve the logistics needs of the country",
     },
     {
       id: 5,
@@ -54,8 +52,7 @@ const Services = () => {
       id: 6,
       icon: <RiRegisteredFill className="commonIcons" />,
       heading: "Registration of Train/Coach ",
-      text:
-        "FTR registration can be done maximum 6 months in advance ."
+      text: "FTR registration can be done maximum 6 months in advance .",
     },
   ]);
   return (

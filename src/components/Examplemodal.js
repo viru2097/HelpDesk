@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Button, Modal} from 'react-bootstrap';
+import React, { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
 
 function Examplemodal(props) {
   const [show, setShow] = useState(false);
@@ -13,19 +13,31 @@ function Examplemodal(props) {
         View Status
       </Button>
 
-      <Modal show={show} onHide={handleClose} style={{color: 'black'}}>
+      <Modal show={show} onHide={handleClose} style={{ color: "black" }}>
         <Modal.Header closeButton>
           <Modal.Title>Complain</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p> <strong>Complaint ID: </strong> {props.itemData.complaint_ID}</p>
-          <p><strong>Priority: </strong>{props.itemData.priority}</p>
-          <p><strong>Description: </strong>{props.itemData.description}</p>
-           <p><strong>Status: </strong>{props.itemData.status}</p> 
+          <p>
+            {" "}
+            <strong>Complaint ID: </strong> {props.itemData.complaint_ID}
+          </p>
+          <p>
+            <strong>Priority: </strong>
+            {props.itemData.priority}
+          </p>
+          <p>
+            <strong>Description: </strong>
+            {props.itemData.description}
+          </p>
+          <p>
+            <strong>Status: </strong>
+            {props.itemData.status}
+          </p>
         </Modal.Body>
       </Modal>
     </>
   );
 }
 
-export default Examplemodal
+export default Examplemodal;

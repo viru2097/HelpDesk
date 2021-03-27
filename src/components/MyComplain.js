@@ -29,7 +29,7 @@ function MyComplain() {
       });
   };
   return (
-    <div className="table-responsive" >
+    <div className="table-responsive">
       <br></br>
       <h1 className="text-center"> Complains List</h1>
       {tableData.length > 0 ? (

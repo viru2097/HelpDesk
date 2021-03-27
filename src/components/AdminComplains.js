@@ -28,35 +28,45 @@ function AdminComplains() {
       });
   };
   return (
-    
     <div>
-      
       <h1 className="text-center">Department Complains List</h1>
-      
+
       {tableData.length > 0 ? (
         <table className=" table table-striped">
           <thead>
             <tr>
-            <td><center>Id</center></td>
-              <td><center>Date</center></td>
-              <td><center>Department Type</center></td>
-              <td><center>Priority</center></td>
-              <td><center>Address</center></td>
-              <td><center>Description</center></td>
-              <td><center>Status</center></td>
-              <td><center>Remarks</center></td>
+              <td>
+                <center>Id</center>
+              </td>
+              <td>
+                <center>Date</center>
+              </td>
+              <td>
+                <center>Department Type</center>
+              </td>
+              <td>
+                <center>Priority</center>
+              </td>
+              <td>
+                <center>Address</center>
+              </td>
+              <td>
+                <center>Description</center>
+              </td>
+              <td>
+                <center>Status</center>
+              </td>
+              <td>
+                <center>Remarks</center>
+              </td>
             </tr>
           </thead>
           <tbody>
-            
             {tableData &&
               tableData.map((item) => {
-                if(item.type===3)
-                var departmentName="General Sugesstions";
-                else if(item.type===2)
-                departmentName="Unethical Issues";
-                else
-                departmentName="Social Issues";
+                if (item.type === 3) var departmentName = "General Sugesstions";
+                else if (item.type === 2) departmentName = "Unethical Issues";
+                else departmentName = "Social Issues";
                 return (
                   <tr>
                     <td>{item.complaint_ID}</td>
@@ -65,11 +75,12 @@ function AdminComplains() {
                     <td> {item.priority}</td>
                     <td> {item.address}</td>
                     <td> {item.description}</td>
-                    <td><center>
-                      <Adminmodal itemData={item} />
-                      </center></td>
+                    <td>
+                      <center>
+                        <Adminmodal itemData={item} />
+                      </center>
+                    </td>
                     <td>{item.remarks}</td>
-                    
                   </tr>
                 );
               })}

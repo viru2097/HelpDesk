@@ -45,16 +45,15 @@ const AdminRegister = () => {
   };
   return (
     <div class="col-12  mt-3 text-light d-flex flex-column justify-content-center align-items-center">
-<div
-  class=" card w-50 card border-info"
-  style={{ width: "50rem" ,background:"#374785"}}
-  
->
-  <div
-    class="card-body text-white d-flex flex-column justify-content-center align-items-center"
-    style={{ width: "400" }}
-  >
-    <div className="App">  
+      <div
+        class=" card w-50 card border-info"
+        style={{ width: "50rem", background: "#374785" }}
+      >
+        <div
+          class="card-body text-white d-flex flex-column justify-content-center align-items-center"
+          style={{ width: "400" }}
+        >
+          <div className="App">
             <h1>
               <b>Admin Registration Form</b>
             </h1>
@@ -106,6 +105,7 @@ const AdminRegister = () => {
                     class="input--style-4"
                     type="text"
                     name="username"
+                    placeholder="Enter username"
                     value={user.username}
                     onChange={(e) =>
                       setUser({ ...user, username: e.target.value })
@@ -168,7 +168,7 @@ const AdminRegister = () => {
         </div>
       </div>
 
-      <div class="row" >
+      <div class="row">
         <div class="line mb-3 mx-auto"></div>
         <div class="d-md-flex px-5 justify-content-around bd-highlight col-md-12 pt-5 pb-5 mb-3 text-dark">
           <div class="p-2 flex-fill bd-highlight mb-5 mb-md-0">

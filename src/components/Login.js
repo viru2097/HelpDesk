@@ -4,9 +4,8 @@ import swal from "sweetalert";
 import { useHistory } from "react-router-dom";
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
-import '../footer.css';
+import "../footer.css";
 import "../Main.css";
-
 
 function Login() {
   const history = useHistory();
@@ -94,21 +93,24 @@ function Login() {
     <div class="col-12  mt-3 text-light d-flex flex-column justify-content-center align-items-center">
       <div
         class=" card w-50 card border-info"
-        style={{ width: "50rem" ,background:"#374785"}}
-        
+        style={{ width: "50rem", background: "#374785" }}
       >
         <div
           class="card-body text-white d-flex flex-column justify-content-center align-items-center"
           style={{ width: "400" }}
         >
           <div className="App">
-            <h1><b>Login</b></h1>
-              <br/>
-              
+            <h1>
+              <b>Login</b>
+            </h1>
+            <br />
+
             <div>
               <form>
                 <div class="form-group">
-                  <label><b>Email ID</b></label>
+                  <label>
+                    <b>Email ID</b>
+                  </label>
                   <input
                     type="email"
                     class="form-control"
@@ -120,8 +122,10 @@ function Login() {
                   />
                 </div>
 
-                <div class="form-group">  
-                  <label><b>Password</b></label>
+                <div class="form-group">
+                  <label>
+                    <b>Password</b>
+                  </label>
                   <input
                     type="password"
                     class="form-control"
@@ -135,7 +139,13 @@ function Login() {
                 </div>
 
                 <div>
-                  <select class="custom-select" onChange={(e) => setUser({...user, loginType:e.target.value})} selected={user.loginType}>
+                  <select
+                    class="custom-select"
+                    onChange={(e) =>
+                      setUser({ ...user, loginType: e.target.value })
+                    }
+                    selected={user.loginType}
+                  >
                     <option disabled="disabled" selected>
                       Open this select menu
                     </option>

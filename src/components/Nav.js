@@ -10,7 +10,7 @@ import ComplainIcon from "@material-ui/icons/Comment";
 import LoginIcon from "@material-ui/icons/Business";
 import { useHistory } from "react-router-dom";
 import swal from "sweetalert";
-import hdiconfinal from '../images/hdiconfinal.jpg'
+import hdiconfinal from "../images/hdiconfinal.jpg";
 
 const Navbar = () => {
   const history = useHistory();
@@ -24,10 +24,23 @@ const Navbar = () => {
     <div className="container-fluid nav_bg ">
       <div className="row">
         <div className="col-12 mx-auto">
-          <nav className="navbar navbar-expand-lg navbar-dark n  " style={{background:"#374785"}}>
+          <nav
+            className="navbar navbar-expand-lg navbar-dark n  "
+            style={{ background: "#374785" }}
+          >
             <NavLink exact className="navbar-brand" to="/home">
-            <img src={hdiconfinal} class="Logo" style={{width:"50px",height:"50px", borderRadius: 400/ 2,marginRight:"5px"}}/>
-       <b>COMMUNAL HELP DESK</b></NavLink>
+              <img
+                src={hdiconfinal}
+                class="Logo"
+                style={{
+                  width: "50px",
+                  height: "50px",
+                  borderRadius: 400 / 2,
+                  marginRight: "5px",
+                }}
+              />
+              <b>COMMUNAL HELP DESK</b>
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
@@ -165,16 +178,21 @@ const Navbar = () => {
                   </li>
                 )}
 
-{(sessionStorage.getItem("Admin Data") ||
+                {(sessionStorage.getItem("Admin Data") ||
                   sessionStorage.getItem("User Data")) && (
                   <li className="nav-item">
-                   <a class="dropdown-item" style={{color:"white"}} href="#">
-                     {sessionStorage.getItem("User Data") &&
-                      JSON.parse(sessionStorage.getItem("User Data"))
-                        .firstName}{" "}
-                    {sessionStorage.getItem("Admin Data") &&
-                      JSON.parse(sessionStorage.getItem("Admin Data")).username}
-                      </a> 
+                    <a
+                      class="dropdown-item"
+                      style={{ color: "white" }}
+                      href="#"
+                    >
+                      {sessionStorage.getItem("User Data") &&
+                        JSON.parse(sessionStorage.getItem("User Data"))
+                          .firstName}{" "}
+                      {sessionStorage.getItem("Admin Data") &&
+                        JSON.parse(sessionStorage.getItem("Admin Data"))
+                          .username}
+                    </a>
                   </li>
                 )}
               </ul>

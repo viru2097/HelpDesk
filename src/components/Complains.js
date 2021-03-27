@@ -10,15 +10,13 @@ import DatePicker from "react-date-picker";
 
 function Complains() {
   const history = useHistory();
-  if (sessionStorage.getItem("User Data") === null) 
-  {
+  if (sessionStorage.getItem("User Data") === null) {
     setTimeout(() => {
       swal("!!", "Please Login First", "error");
     }, 500);
-    
+
     history.push("/login");
     window.location.reload();
-   
   }
 
   const [complain, setComplain] = useState({
@@ -30,11 +28,10 @@ function Complains() {
     userId: 0,
     file: File,
   });
-  
+
   useEffect(() => {
     checkdata();
   }, []);
-
 
   const registerComplaint = useCallback(
     (e) => {
@@ -49,7 +46,6 @@ function Complains() {
         swal("Oops!", "Please Fill Details!", "error");
       } else {
         postlogineonServer(complain);
-        
       }
     },
     [complain]
@@ -102,7 +98,7 @@ function Complains() {
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
       <div class="wrapper wrapper--w680 bg bg-primary  ">
         <div class="card card-4 ">
-          <div class="card-body "style={{background:"#374785"}}>
+          <div class="card-body " style={{ background: "#374785" }}>
             <h2 class="title">Complaint Registration Form</h2>
             <form>
               <div class="row row-space">
@@ -175,6 +171,7 @@ function Complains() {
                   <label class="label">Upload Attachment</label>
                   <div class="input-group">
                     <input
+                      style={{ color: "black" }}
                       type="file"
                       onChange={(e) =>
                         setComplain({ ...complain, file: e.target.files[0] })
@@ -219,7 +216,6 @@ function Complains() {
                 </div>
               </div>
 
-             
               {/* <input type="checkBox" onChange={checkdata} /> */}
               <div class="d-flex justify-content-center">
                 <button

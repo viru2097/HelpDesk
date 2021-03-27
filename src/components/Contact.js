@@ -8,19 +8,19 @@ const Contact = () => {
   const [data, setData] = useState({
     fullname: "",
     email: "",
-    message:""
+    message: "",
   });
 
   const formSubmit = (e) => {
     e.preventDefault();
-    if (data.fullname === "" || data.email === "" || data.message==="") {
+    if (data.fullname === "" || data.email === "" || data.message === "") {
       swal("Error", "Please Fill Data", "error");
     } else {
       swal("Success", "We will update to you soon", "success");
       setData({
-        fullname:"",
-        email:"",
-        message:""
+        fullname: "",
+        email: "",
+        message: "",
       });
     }
   };
@@ -89,7 +89,6 @@ const Contact = () => {
                     onChange={(e) =>
                       setData({ ...data, email: e.target.value })
                     }
-                   
                   />
                 </div>
                 <p className="text-center mb-6">
